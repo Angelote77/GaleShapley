@@ -5,26 +5,26 @@ public class Gale_Shapley {
 	
 	public static void main(String[] args) {
 		int prefeHombres[][] = new int[][] {{7, 5, 6, 8, 9},
-            						   		{5, 8, 6, 7, 9},
-            						   		{9, 5, 6, 7, 8},
-            						   		{8, 5, 6, 7, 9},
-            						   		{9, 8, 7, 6, 5},
-            						   		{1, 2, 3, 4, 0},
-            						   		{0, 1, 2, 3, 4},
-            						   		{0, 1, 2, 3, 4},
-            						   		{0, 1, 2, 3, 4},
-            						   		{0, 1, 2, 3, 4}};
+						    {5, 8, 6, 7, 9},
+						    {9, 5, 6, 7, 8},
+						    {8, 5, 6, 7, 9},
+						    {9, 8, 7, 6, 5},
+						    {1, 2, 3, 4, 0},
+						    {0, 1, 2, 3, 4},
+						    {0, 1, 2, 3, 4},
+						    {0, 1, 2, 3, 4},
+						    {0, 1, 2, 3, 4}};
             						   		
         int prefeMujeres[][] = new int[][] {{6, 7, 8, 9, 5},
-	   										{5, 6, 7, 8, 9},
-	   										{5, 6, 7, 8, 9},
-	   										{5, 6, 7, 8, 9},
-	   										{5, 6, 7, 8, 9},
-	   										{2, 0, 1, 3, 4},
-            						   		{0, 3, 1, 2, 4},
-            						   		{4, 0, 1, 2, 3},
-            						   		{3, 0, 1, 2, 4},
-            						   		{4, 3, 2, 1, 0}};
+					    {5, 6, 7, 8, 9},
+					    {5, 6, 7, 8, 9},
+					    {5, 6, 7, 8, 9},
+					    {5, 6, 7, 8, 9},
+					    {2, 0, 1, 3, 4},
+					    {0, 3, 1, 2, 4},
+					    {4, 0, 1, 2, 3},
+					    {3, 0, 1, 2, 4},
+					    {4, 3, 2, 1, 0}};
             						   		
         System.out.println("- Preferencia de hombres");
         System.out.println("Mujeres Hombres");
@@ -34,8 +34,8 @@ public class Gale_Shapley {
         establecer_Parejas(prefeMujeres);
 	}
 	
-	//método para retornar verdadero si la mujer prefiere al nuevo sobre el anterior hombre
-	//y también para conocer si el hombre prefiere a la nueva sobre la anterior mujer
+	//mÃ©todo para retornar verdadero si la mujer prefiere al nuevo sobre el anterior hombre
+	//y tambiÃ©n para conocer si el hombre prefiere a la nueva sobre la anterior mujer
 	public static boolean Preferencia(int arreglo[][], int elige,int nuevo,int actual) {	
 		//Comprobar si el que elige prefiere al nuevo antes que al actual
 		for(int i=0; i<Cant; i++) {
@@ -77,7 +77,7 @@ public class Gale_Shapley {
 				}else { // si no es soltero(a) 
 					//encontrar la pareja actual
 					int actual = pareja[elige-Cant];
-					//llamamos al método de preferencia
+					//llamamos al mÃ©todo de preferencia
 					if(Preferencia(arreglo,elige,nuevo,actual)==false) {
 						pareja[elige-Cant] = nuevo;
 						solteros[nuevo] = true;
